@@ -1,0 +1,20 @@
+*{
+    background-color: black;
+    
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    
+
+}
+.main-heading{
+    padding-top: 40px ;
+    font-size: 26px;
+}
+.header-tagline{
+    padding-top: 10px;
+    font-size: 16px;
+}
