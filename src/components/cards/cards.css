@@ -1,0 +1,43 @@
+.main-card{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: auto;
+    padding-left: 20px;
+}
+.recipe-name{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+.recipe-image{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    
+}
+.recipe-info{
+    padding-top: 10px;
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+}
+.recipe-ratings > p{
+    gap: 2px;
+}
+
+.star {
+    font-size: 15px;
+    color: gray; /* Default gray color */
+}
+
+.star.full {
+    color: gold; /* Full stars are gold */
+}
+
+.star.half {
+    background: linear-gradient(to right, gold 50%, gray 50%);
+    background-clip: text;
+    color: transparent;
+}
+
