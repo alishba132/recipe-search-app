@@ -1,17 +1,12 @@
 import React from "react";
-import Header from "./components/header/Header";
-import RecipeSearchBar from "./components/recipeSearchBar/recipeSearchBar";
-import Cards from "./components/cards/cards";
-
+import HomePage from "./components/Pages/homePage";
+import "./App.css";
 
 function App() {
   return (
     <>
-    <div>
-      <Header/>
-      <RecipeSearchBar/>
-      <Cards/>
-      
+      <div>
+        <HomePage />
       </div>
     </>
   );

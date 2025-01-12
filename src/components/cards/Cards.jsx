@@ -1,28 +1,32 @@
-import recipeCard1 from "../../assets/recipe-card1.svg";
-import "./cards.css";
 import React from "react";
-const Cards=()=>{
-    return(
-        <div className="main-card">
-            <img src={recipeCard1} alt="recipeCard1"  width="200px"  className="recipe-image" />
-            <p className="recipe-name">Pasta</p>
-            <div className="recipe-info">
-                <div className="make-time">
-                    <p>30min</p>
-                </div>
-                <div className="recipe-ratings">
-                    <p>4.5
-                        <span className=" star full">★</span>
-                        <span className="star full">★</span>
-                        <span className="star full">★</span>
-                        <span className="star full">★</span>
-                        <span className="star half">★</span>
-                    </p>
-                </div>
+import clock from "../../assets/clock.png";
+import ratingStar from "../../assets/star.png";
+import "./cards.css";
 
-            </div>
-
+const Cards = ({ recipe }) => {
+  return (
+    <div className="main-card">
+      <img
+        src={recipe.image}
+        alt={recipe.name}
+        width="350px"
+        className="recipe-image"
+      />
+      <p className="recipe-name">{recipe.name}</p>
+      <div className="recipe-info">
+        <div className="make-time">
+            <img src={clock} alt="clock" height="15px" width="15px"/>
+          <p>{recipe.cookTimeMinutes}min</p>
         </div>
-    )
-}
+        <div className="recipe-ratings">
+          <p>
+            4.9{recipe.ratings}
+            <img src={ratingStar}  alt="rating Star" width="15px" height="15px"/>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default Cards;
