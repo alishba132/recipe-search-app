@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 import "./recipeSearchBar.css";
-const RecipeSearchBar = ({ addRecipes }) => {
+const RecipeSearchBar = ({ addRecipes,setLoader}) => {
   const [keyword, setKeyword] = useState("");
+  
   const getSearchedRecipes = (recipe) => {
+    setLoader(true);
     fetch(`https://dummyjson.com/recipes/search?q=${recipe}`)
       .then((response) => response.json())
-      .then((data) => addRecipes(data.recipes));
+      .then((data) => 
+      {
+        addRecipes(data.recipes);
+        setLoader(false);
+      }
+        
+      );
   };
   return (
     <div className="recipe-control-search-app">
