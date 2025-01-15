@@ -3,6 +3,7 @@ import Header from "../header/Header";
 import RecipeSearchBar from "../recipeSearchBar/recipeSearchBar";
 import Cards from "../cards/cards";
 import { FadeLoader } from "react-spinners";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]);
@@ -25,7 +26,9 @@ const HomePage = () => {
       </div> :
        <div className="recipe-cards">
        {recipes.map((recipe) => (
+        <Link to={`/recipe-detail/?id=${recipe.id}`}>
          <Cards recipe={recipe} />
+         </Link>
        ))}
      </div>
 

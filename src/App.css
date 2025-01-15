@@ -11,3 +11,30 @@
   justify-content: center;
   align-items: center;
 }
+
+.recipe-detail{
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.recipe-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+.heading{
+  font-size: 26px;
+  font-weight: 600;
+}
+.recipe-image > img{
+  border-radius: 30px;
+}
+.recipe{
+  font-size: 16px;
+}
+.ingredients{
+  margin-top: 5px;
+}
+
+
